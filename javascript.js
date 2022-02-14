@@ -36,6 +36,10 @@ function reset() {
 
 function createGrid() {
     let newDimension = prompt("Enter the dimension of the canvas. (eg: 41)");
+    if(newDimension > 100) {
+        newDimension = prompt("Too big! 100 or less.");
+
+    }
     const container = document.getElementById("container");
     const newWidth = 600 / newDimension;
     
